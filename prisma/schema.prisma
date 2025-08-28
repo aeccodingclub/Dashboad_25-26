@@ -1,0 +1,75 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  technologies String[]
+  githubUrl   String?
+  liveUrl     String?
+  imageUrl    String[]
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("projects")
+}
+
+model Event {
+  id          String   @id @default(cuid())
+  title       String
+  description String
+  date        DateTime
+  location    String?
+  imageUrl    String?
+  signupUrl   String?
+  featured    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("events")
+}
+
+enum Wing {
+  WEB
+  AIML
+  CPDSA
+  OTHER
+}
+
+enum Role {
+  PRESIDENT
+  CORE_MEMBER
+  MEMBER
+}
+
+model Member {
+  id          String   @id @default(cuid())
+  name        String
+  role        String   // e.g., "President", "Vice President", "Lead - Web Wing"
+  wing        Wing     // e.g., "Web", "AI/ML", "CP/DSA"
+  bio         String?
+  imageUrl    String?
+  socials     Json?    // { github: "", linkedin: "", twitter: "" }
+  email       String?
+  isCore      Boolean  @default(false)
+  joinedAt    DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("members")
+}
