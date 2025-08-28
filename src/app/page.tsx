@@ -11,8 +11,8 @@ export default function Home() {
         <HeroSection />
         <main className="mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
           <AboutSection />
-          <EventsSection />
           <WingsSection />
+          <EventsSection />
           <ProjectsSection />
           <InchargeSection />
           <PresidentSection />

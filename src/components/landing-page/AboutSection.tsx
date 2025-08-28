@@ -17,7 +17,7 @@ const AboutSection = () => {
         <h1 className="text-4xl font-bold text-center mb-16">Who Are We?</h1>
 
         <div className="grid md:grid-cols-2 gap-16">
-          <div className="flex flex-col justify-between gap-8">
+          <div className="flex flex-col items-center justify-between gap-8">
             <div className="flex flex-col gap-6">
               <p>
                 The Coding Club is at the heart of Assam Engineering College&apos;s tech scene — 
@@ -33,8 +33,8 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <Link href="/about" className="w-48 h-10 border-2 rounded-lg flex items-center justify-center hover:text-blue-400 transition-colors">
-              Learn More
+            <Link href="https://forms.gle/MSBW2LNa5H6aCwcs6/" className="w-48 h-10 border-2 rounded-lg flex items-center justify-center hover:text-blue-400 transition-colors">
+              Join Us
             </Link>
           </div>
 

@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowRight, Calendar } from 'lucide-react'
+import { ArrowRight, Calendar, UserPlus } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 const HeroSection = () => {
@@ -139,24 +139,25 @@ const HeroSection = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <button 
                     onClick={() => scrollToSection('about')}
-                    className="w-72 group relative bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
+                    className="w-72 group relative cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
                   >
                     <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                     <span className="relative flex items-center justify-center">
-                      Enter Club
+                      Enter Portal
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                     </span>
                   </button>
 
-                  <button 
-                    onClick={() => scrollToSection('events')}
-                    className="w-72 group relative border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/10 dark:bg-black/10"
-                  >
-                    <span className="relative flex items-center justify-center">
-                      View Events
-                      <Calendar className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
-                    </span>
-                  </button>
+                  <a href="https://forms.gle/MSBW2LNa5H6aCwcs6/" target="_blank" rel="noopener noreferrer">
+                    <button
+                      className="w-72 group relative border-2 cursor-pointer border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/10 dark:bg-black/10"
+                    >
+                      <span className="relative flex items-center justify-center">
+                        Join Us
+                        <UserPlus className="ml-2 w-4 h-4 group-hover:rotate-12 transition-transform duration-300" />
+                      </span>
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>

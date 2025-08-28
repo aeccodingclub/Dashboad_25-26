@@ -34,10 +34,10 @@ const WingsSection = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {wings.map((wing, index) => (
-            <div key={index} className="bg-gray-50 rounded-xl p-8 hover:shadow-lg transition-shadow">
+            <div key={index} className="bg-gray-50 dark:bg-slate-700 border-gray-400 border-1 rounded-xl p-8 hover:shadow-lg transition-shadow">
               <div className="text-4xl mb-4">{wing.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{wing.title}</h3>
-              <p className="text-gray-600 mb-6">{wing.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">{wing.title}</h3>
+              <p className="text-gray-600 dark:text-gray-200 mb-6">{wing.description}</p>
               <div className="flex flex-wrap gap-2">
                 {wing.skills.map((skill, skillIndex) => (
                   <span key={skillIndex} className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
