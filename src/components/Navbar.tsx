@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { type BaseProps } from "@/lib/types"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 
 const Navbar = ({ className }: BaseProps) => {
   const [hydrated, setHydrated] = useState(false)
@@ -83,7 +84,7 @@ const Navbar = ({ className }: BaseProps) => {
 
             {/* Center Logo */}
             <div className="flex-shrink-0">
-              <img
+              <Image
                 src={'logo.svg'}
                 alt="Coding Club Logo"
                 className="h-10 w-auto"

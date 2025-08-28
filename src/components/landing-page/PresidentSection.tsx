@@ -19,10 +19,10 @@ const PresidentSection = () => {
           </h2>
           <div className="text-lg leading-relaxed space-y-4">
             <p>
-              "Programming isn't just about knowledge, it's about the ability to solve problems."
+              &quot;Programming isn&apos;t just about knowledge, it&apos;s about the ability to solve problems.&quot;
             </p>
             <p>
-              I'm honored to serve as the President of AEC Coding Club for the 2025-26 session. 
+              I&apos;m honored to serve as the President of AEC Coding Club for the 2025-26 session. 
               AEC Coding Club stands out as one of the most dynamic clubs at AEC, fostering a large 
               community of coding enthusiasts overseen by seasoned tech experts. The club opens doors 
               to countless opportunities, offering joyous experiential learning. Each member is 
@@ -31,7 +31,7 @@ const PresidentSection = () => {
             <p>
               Working alongside a dedicated, innovative, and passionate team is a daily privilege. 
               Our collaboration brings new learning experiences, allowing us to consistently broaden our 
-              horizons. With the team's unwavering support, I am confident that we can cultivate an 
+              horizons. With the team&apos;s unwavering support, I am confident that we can cultivate an 
               environment conducive to coding excellence at AEC, propelling the club to greater heights.
             </p>
           </div>

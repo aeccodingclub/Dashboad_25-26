@@ -1,6 +1,7 @@
 'use client'
 
-import { ArrowRight, Calendar, UserPlus } from 'lucide-react'
+import { ArrowRight, UserPlus } from 'lucide-react'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const HeroSection = () => {
@@ -103,7 +104,7 @@ const HeroSection = () => {
                 filter: 'blur(30px)',
               }}
             />
-            <img 
+            <Image
               src="/logo.svg" 
               alt="AEC Coding Club Logo" 
               className="w-24 h-24 md:w-40 md:h-40 mx-auto drop-shadow-2xl relative z-10 transition-transform duration-300 hover:scale-105"

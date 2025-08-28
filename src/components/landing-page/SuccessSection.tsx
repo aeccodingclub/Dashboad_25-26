@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 const SuccessSection = () => {
   const profiles = [
     {
@@ -47,7 +49,7 @@ const SuccessSection = () => {
             key={idx}
             className="flex flex-col items-center p-6 rounded-2xl border border-gray-300 dark:border-gray-700 shadow-md bg-white dark:bg-gray-800 hover:shadow-lg transition-shadow"
           >
-            <img
+            <Image
               src={profile.avatar}
               alt={profile.name}
               className="w-20 h-20 rounded-full object-cover mb-4"

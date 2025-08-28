@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Error({
   error,
@@ -34,7 +35,7 @@ export default function Error({
             Oops! Something went wrong
           </h1>
           <p className="text-lg text-gray-600">
-            Our code encountered an unexpected bug. Don't worry, our development team is already debugging this! 
+            Our code encountered an unexpected bug. Don&apos;t worry, our development team is already debugging this! 
             <span className="inline-block ml-1">🐛</span>
           </p>
           
@@ -61,13 +62,13 @@ export default function Error({
             <span>Try Again</span>
           </button>
           
-          <a
+          <Link
             href="/"
             className="inline-flex items-center space-x-2 border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-medium transition-colors"
           >
             <Home size={20} />
             <span>Go Home</span>
-          </a>
+          </Link>
         </div>
 
         {/* Status message */}

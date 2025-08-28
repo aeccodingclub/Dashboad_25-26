@@ -58,7 +58,7 @@ const EventsSection = () => {
           {events
             .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
             .slice(0, 3)
-            .map((event, index) => (
+            .map((event) => (
             <div 
               key={event.id} 
               className="group relative bg-white dark:bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-xl dark:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-slate-600/30"
