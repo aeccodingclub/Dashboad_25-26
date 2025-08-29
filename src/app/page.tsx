@@ -5,15 +5,15 @@ import { AboutSection, EventsSection, HeroSection, InchargeSection, PresidentSec
 
 export default function Home() {
   return (
-    <Layout className="gap-20">
+    <Layout>
       <Navbar />
-      <div className="flex-1 space-y-16">
+      <div>
         <HeroSection />
-        <main className="mx-auto px-4 sm:px-6 lg:px-8 space-y-32">
+        <main>
           <AboutSection />
           <WingsSection />
-          <EventsSection />
           <ProjectsSection />
+          <EventsSection />
           <InchargeSection />
           <PresidentSection />
           <SuccessSection />

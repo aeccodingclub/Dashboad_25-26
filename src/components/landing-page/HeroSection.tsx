@@ -1,7 +1,6 @@
 'use client'
 
 import { ArrowRight, UserPlus } from 'lucide-react'
-import Image from 'next/image'
 import { useState, useEffect } from 'react'
 
 const HeroSection = () => {
@@ -55,7 +54,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
-          backgroundImage: 'url("/gamer-bg.jpeg")',
+          backgroundImage: 'url("/bg/gamer-bg-1.jpeg")',
           filter: 'brightness(0.3) contrast(0.8)'
         }}
       />
@@ -104,16 +103,16 @@ const HeroSection = () => {
                 filter: 'blur(30px)',
               }}
             />
-            <Image
+            <img
               src="/logo.svg" 
               alt="AEC Coding Club Logo" 
-              className="w-24 h-24 md:w-40 md:h-40 mx-auto drop-shadow-2xl relative z-10 transition-transform duration-300 hover:scale-105"
+              className="w-20 h-20 sm:w-28 sm:h-28 md:w-40 md:h-40 mx-auto drop-shadow-2xl relative z-10 transition-transform duration-300 hover:scale-105"
             />
           </div>
 
           {/* Animated heading */}
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative font-mono">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 relative font-mono">
               <span className="relative inline-block">
                 <span className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent animate-pulse">
                   &lt;AEC Coding Club /&gt;
@@ -127,8 +126,8 @@ const HeroSection = () => {
             {/* Glassmorphic card with tagline, description and CTAs */}
             <div className="relative mx-auto max-w-3xl">
               <div className="absolute inset-0 bg-white/20 dark:bg-black/20 backdrop-blur-xl rounded-2xl border border-white/30 dark:border-white/10" />
-              <div className="relative py-8 px-8 space-y-2">
-                <p className="text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 font-medium">
+              <div className="relative py-6 px-4 sm:py-8 sm:px-8 space-y-2">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-700 dark:text-gray-200 font-medium">
                   Dream. Craft. Inspire.
                   <br />
                   <span className="text-blue-600 dark:text-blue-400 font-semibold">
@@ -140,7 +139,7 @@ const HeroSection = () => {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                   <button 
                     onClick={() => scrollToSection('about')}
-                    className="w-72 group relative cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
+                    className="w-full sm:w-64 md:w-72 group relative cursor-pointer bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl overflow-hidden"
                   >
                     <span className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300" />
                     <span className="relative flex items-center justify-center">
@@ -149,9 +148,9 @@ const HeroSection = () => {
                     </span>
                   </button>
 
-                  <a href="https://forms.gle/MSBW2LNa5H6aCwcs6/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://forms.gle/MSBW2LNa5H6aCwcs6/" target="_blank" rel="noopener noreferrer" className="w-full sm:w-64 md:w-72">
                     <button
-                      className="w-72 group relative border-2 cursor-pointer border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/10 dark:bg-black/10"
+                      className="w-full group relative border-2 cursor-pointer border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-600 dark:hover:bg-blue-400 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/10 dark:bg-black/10"
                     >
                       <span className="relative flex items-center justify-center">
                         Join Us

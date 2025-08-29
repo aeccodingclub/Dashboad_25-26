@@ -2,14 +2,18 @@ import Link from "next/link"
 
 const AboutSection = () => {
   return (
-    <section 
-      id="about" 
-      className="scroll-m-32 relative flex flex-col items-center text-gray-900 dark:text-gray-200"
+    <section
+      id="about"
+      className="scroll-m-16 relative flex flex-col items-center text-gray-900 dark:text-gray-200
+                 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-0.25
+                 before:rounded-b-xl
+                 before:bg-gradient-to-r before:from-blue-400 before:via-pink-400 before:to-purple-400
+                 before:opacity-60 dark:before:opacity-40"
     >
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-        style={{ backgroundImage: "url('/pattern-bg-1.jpg')" }}
+        style={{ backgroundImage: "url('/bg/pattern-bg-1.jpg')" }}
       />
 
       {/* Content wrapper */}

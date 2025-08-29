@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import { Menu, X } from "lucide-react"
 import { type BaseProps } from "@/lib/types"
 import { usePathname } from "next/navigation"
-import Image from "next/image"
 
 const Navbar = ({ className }: BaseProps) => {
   const [hydrated, setHydrated] = useState(false)
@@ -44,15 +43,15 @@ const Navbar = ({ className }: BaseProps) => {
   const leftNavItems = [
     { name: 'Home', href: '/#' },
     { name: 'About', href: '/#about' },
-    { name: 'Events', href: '/events' },
-    { name: 'Team', href: '/core-team' }
+    { name: 'Wings', href: '/#wings' },
+    { name: 'Projects', href: '/#projects' }
   ]
 
   const rightNavItems = [
-    { name: 'Blog', href: '/blog' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Projects', href: '/projects' },
-    { name: 'Contact', href: '/contact' }
+    { name: 'Events', href: '/#events' },
+    { name: 'Team', href: 'https://coding.aec.ac.in/Teams%20Page/team2025.html' },
+    { name: 'Contact', href: 'https://coding.aec.ac.in/contact-page/index.html' },
+    { name: 'Join Us', href: 'https://coding.aec.ac.in/join%20us%20page/join.html' }
   ]
 
   if (!hydrated) {
@@ -84,7 +83,7 @@ const Navbar = ({ className }: BaseProps) => {
 
             {/* Center Logo */}
             <div className="flex-shrink-0">
-              <Image
+              <img
                 src={'logo.svg'}
                 alt="Coding Club Logo"
                 className="h-10 w-auto"

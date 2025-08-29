@@ -4,7 +4,6 @@ import ScrollToTop from "@/components/ScrollToTop"
 const Layout = ({ children, className }: BaseProps) => {
   return (
     <div className={`min-h-screen flex flex-col bg-slate-200 dark:bg-slate-800 ${className || ''}`}>
-      
       {/* Subtle background pattern */}
       <div className="fixed inset-0 -z-10 opacity-[0.02] dark:opacity-[0.05]">
         <div 
@@ -15,7 +14,7 @@ const Layout = ({ children, className }: BaseProps) => {
           }}
         />
       </div>
-
+      
       {children}
       <ScrollToTop />
     </div>

@@ -12,10 +12,10 @@ const Footer = ({ className }: BaseProps) => {
 
   const pageLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Events', href: '/events' },
-    { name: 'Team', href: '/core-team' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Projects', href: '/projects' },
+    { name: 'Events', href: '/#events' },
+    { name: 'Team', href: 'https://coding.aec.ac.in/Teams%20Page/team2025.html' },
+    { name: 'Gallery', href: 'https://coding.aec.ac.in/gallery%20page/gallery.html#home' },
+    { name: 'Projects', href: '/#projects' },
    ]
 
   return (

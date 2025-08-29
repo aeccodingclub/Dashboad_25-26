@@ -1,5 +1,6 @@
 import { events } from "@/lib/data"
 import MonthlySchedule from "../MonthlySchedule"
+import Link from "next/link"
 
 const EventsSection = () => {
   const getStatusBadge = (status: string) => {
@@ -40,8 +41,20 @@ const EventsSection = () => {
   }
 
   return (
-    <section id="events" className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="events" 
+      className="scroll-m-16 relative flex flex-col items-center text-gray-900 dark:text-gray-200
+                 before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-0.25
+                 before:rounded-b-xl
+                 before:bg-gradient-to-r before:from-blue-400 before:via-pink-400 before:to-purple-400
+                 before:opacity-60 dark:before:opacity-40"
+    >
+      {/* Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-top bg-no-repeat opacity-10"
+        style={{ backgroundImage: "url('/bg/led-bg-2.jpeg')" }}
+      />
+
+      <div className="max-w-7xl z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Upcoming Events
@@ -52,7 +65,9 @@ const EventsSection = () => {
         </div>
         
         {/* Monthly Schedule - Keep at top */}
-        <MonthlySchedule />
+        <div className="max-w-5xl mx-auto px-4">
+          <MonthlySchedule />
+        </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {events
@@ -64,7 +79,7 @@ const EventsSection = () => {
               className="group relative bg-white dark:bg-slate-700/50 backdrop-blur-sm rounded-2xl p-6 shadow-sm hover:shadow-xl dark:shadow-slate-900/20 transition-all duration-300 hover:-translate-y-1 border border-gray-100 dark:border-slate-600/30"
             >
               {/* Gradient accent border */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${event.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+              <div className={`absolute inset-0 bg-gradient-to-r ${event.color} rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`} />
               
               {/* Type icon and status badge */}
               <div className="flex items-center justify-between mb-4">
@@ -114,20 +129,30 @@ const EventsSection = () => {
               <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
                 {event.description}
               </p>
-              
-              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800">
+              <a
+                href={event.link}
+                className="block w-full text-center bg-gradient-to-r from-blue-600 to-purple-600 
+                          hover:from-blue-700 hover:to-purple-700 text-white font-medium py-3 px-6 
+                          rounded-xl transition-all duration-300 transform hover:scale-105 
+                          focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Register Now →
-              </button>
+            </a>
             </div>
           ))}
         </div>
 
         {/* View All Events Button */}
         <div className="text-center mt-12">
-          <button className="group relative inline-block text-blue-600 dark:text-blue-400 font-semibold text-lg transition-colors duration-300 hover:text-blue-700 dark:hover:text-blue-300">
+          <a
+            href="/#events"
+            className="group relative inline-block text-blue-600 dark:text-blue-400 font-semibold text-lg transition-colors duration-300 hover:text-blue-700 dark:hover:text-blue-300"
+          >
             View All Events
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

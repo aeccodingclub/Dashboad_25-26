@@ -1,15 +1,23 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { Params } from 'next/dist/server/request/params'
 
 // GET - Fetch single event by ID
 export async function GET(
-  request: NextRequest,
-  { params }: { params: { id: string } }
+  _request: NextRequest,
+  { params }: { params: Promise<{ id: string }>}
 ) {
   try {
+    const { id } = await params
+    if (!id) return
+    
+    if (Array.isArray(id)) {
+      return NextResponse.json({ status: 400 })
+    }
+    
     const event = await prisma.event.findUnique({
       where: {
-        id: params.id
+        id
       }
     })
 
@@ -43,15 +51,22 @@ export async function GET(
 // PUT - Update event by ID
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: {params: Params}
 ) {
   try {
+    const { id } = params
+    if (!id) return
+    
+    if (Array.isArray(id)) {
+      return NextResponse.json({ status: 400 })
+    }
+
     const body = await request.json()
     const { title, description, date, location, imageUrl, registrationUrl, featured } = body
 
     // Check if event exists
     const existingEvent = await prisma.event.findUnique({
-      where: { id: params.id }
+      where: { id }
     })
 
     if (!existingEvent) {
@@ -67,7 +82,7 @@ export async function PUT(
     // Update event
     const updatedEvent = await prisma.event.update({
       where: {
-        id: params.id
+        id
       },
       data: {
         ...(title && { title }),
@@ -100,13 +115,19 @@ export async function PUT(
 
 // DELETE - Delete event by ID
 export async function DELETE(
-  request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: {params: Params}
 ) {
   try {
+    const { id } = params
+    if (!id) return
+    
+    if (Array.isArray(id)) {
+      return NextResponse.json({ status: 400 })
+    }
+
     // Check if event exists
     const existingEvent = await prisma.event.findUnique({
-      where: { id: params.id }
+      where: { id }
     })
 
     if (!existingEvent) {
@@ -122,7 +143,7 @@ export async function DELETE(
     // Delete event
     await prisma.event.delete({
       where: {
-        id: params.id
+        id
       }
     })
 
