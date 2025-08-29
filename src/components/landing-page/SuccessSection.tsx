@@ -144,14 +144,14 @@ const SuccessSection = () => {
 
                   <div className="relative">
                     <div className="absolute top-0 left-0 text-3xl sm:text-4xl text-blue-400/30 dark:text-blue-400/20 font-serif leading-none">
-                      "
+                      &quot;
                     </div>
                     <p className="text-xs sm:text-sm md:text-base text-gray-700 dark:text-gray-300 italic pl-6 sm:pl-8 pr-2 sm:pr-4 
                                   group-hover:text-gray-600 dark:group-hover:text-gray-200 transition-colors duration-300">
                       {profile.message}
                     </p>
                     <div className="absolute bottom-0 right-0 text-3xl sm:text-4xl text-blue-400/30 dark:text-blue-400/20 font-serif leading-none transform rotate-180">
-                      "
+                      &quot;
                     </div>
                   </div>
                 </div>

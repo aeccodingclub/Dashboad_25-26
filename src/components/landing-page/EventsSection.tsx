@@ -146,13 +146,13 @@ const EventsSection = () => {
 
         {/* View All Events Button */}
         <div className="text-center mt-12">
-          <a
+          <Link
             href="/#events"
             className="group relative inline-block text-blue-600 dark:text-blue-400 font-semibold text-lg transition-colors duration-300 hover:text-blue-700 dark:hover:text-blue-300"
           >
             View All Events
             <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
