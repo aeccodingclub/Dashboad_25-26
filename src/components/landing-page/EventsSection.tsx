@@ -51,7 +51,7 @@ const EventsSection = () => {
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-top bg-no-repeat opacity-10"
-        style={{ backgroundImage: "url('/bg/led-bg-2.jpeg')" }}
+        style={{ backgroundImage: "url('bg/led-bg-2.jpeg')" }}
       />
 
       <div className="max-w-7xl z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20">

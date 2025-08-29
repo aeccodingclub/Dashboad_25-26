@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     siteName: 'AEC Coding Club',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'AEC Coding Club',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'AEC Coding Club',
     description: 'Join AEC Coding Club - A community of passionate developers, innovators, and problem solvers.',
-    images: ['/og-image.jpg'],
+    images: ['og-image.jpg'],
   },
   robots: {
     index: true,
@@ -63,14 +63,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: 'favicon.svg', type: 'image/svg+xml' },
+      { url: 'favicon.ico' },
+      { url: 'favicon-96x96.png', sizes: '96x96', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
+    shortcut: 'favicon.ico',
+    apple: 'apple-touch-icon.png',
   },
-  manifest: '/site.webmanifest',
+  manifest: 'site.webmanifest',
   appleWebApp: {
     title: 'AEC Coding Club',
     statusBarStyle: 'default',

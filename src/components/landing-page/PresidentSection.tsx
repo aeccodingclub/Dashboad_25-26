@@ -10,7 +10,7 @@ const PresidentSection = () => {
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-        style={{ backgroundImage: "url('/bg/led-bg-1.jpg')" }}
+        style={{ backgroundImage: "url('bg/led-bg-1.jpg')" }}
       />
       
       {/* Content Wrapper */}
@@ -46,7 +46,7 @@ const PresidentSection = () => {
           <div className="flex flex-col items-center gap-8">
             <div className="w-40 h-40 sm:w-64 sm:h-64 rounded-full overflow-hidden border-4 border-gray-300 dark:border-gray-600">
               <img
-                src="/about/shivayan.jpg"
+                src="about/shivayan.jpg"
                 alt="Club President"
                 width={320}
                 height={320}

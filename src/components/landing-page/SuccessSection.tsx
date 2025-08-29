@@ -53,7 +53,7 @@ const SuccessSection = () => {
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-        style={{ backgroundImage: "url('/bg/space-bg-1.jpg')" }}
+        style={{ backgroundImage: "url('bg/space-bg-1.jpg')" }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">

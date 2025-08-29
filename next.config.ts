@@ -3,7 +3,7 @@ const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  output: isGitHubPages ? 'export' : 'standalone',
   basePath: isGitHubPages ? '/Dashboad_25-26' : '',
   assetPrefix: isGitHubPages ? '/Dashboad_25-26/' : '/',
   trailingSlash: true,

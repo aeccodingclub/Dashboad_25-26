@@ -20,7 +20,7 @@ const ProjectsSection = () => {
       authors: ["Aryan Rajkhowa"],
       githubUrl: "https://github.com/RaulOverhaul/Flood_Detection_using_Mask_RCNN",
       liveUrl: "https://github.com/RaulOverhaul/Flood_Detection_using_Mask_RCNN",
-      image: "/projects/flood-detection.png"
+      image: "projects/flood-detection.png"
     },
     {
       title: "Dashify",
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
       authors: ["Shivayan Chakraborty"],
       githubUrl: "https://github.com/Shivayan09/Dashifyy",
       liveUrl: "https://dashify-frontend-rk1l.onrender.com/",
-      image: "/projects/dashify.png"
+      image: "projects/dashify.png"
     },
     {
       title: "Aasaan Retirement",
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
       authors: ["Sambhab Roy"],
       githubUrl: "https://github.com/samX18-epic/aasan-retirement-final",
       liveUrl: "https://retirementaasan.in/",
-      image: "/projects/aasaan-retirement.png"
+      image: "projects/aasaan-retirement.png"
     }
   ]
 
@@ -55,7 +55,7 @@ const ProjectsSection = () => {
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-        style={{ backgroundImage: "url('/bg/pattern-bg-2.jpg')" }}
+        style={{ backgroundImage: "url('bg/pattern-bg-2.jpg')" }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">

@@ -52,7 +52,7 @@ const WingsSection = () => {
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 blur-xs"
-        style={{ backgroundImage: "url('/bg/code-bg-1.jpg')" }}
+        style={{ backgroundImage: "url('bg/code-bg-1.jpg')" }}
       />
 
       <div className="max-w-7xl z-10 mx-auto px-4 sm:px-6 lg:px-8 py-20">

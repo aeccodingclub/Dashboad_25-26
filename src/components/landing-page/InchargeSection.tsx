@@ -10,7 +10,7 @@ const InchargeSection = () => {
       {/* Background image overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-        style={{ backgroundImage: "url('/bg/stripes-bg-1.jpeg')" }}
+        style={{ backgroundImage: "url('bg/stripes-bg-1.jpeg')" }}
       />
 
       {/* Content Wrapper */}
@@ -20,7 +20,7 @@ const InchargeSection = () => {
           <div className="flex flex-col items-center order-2 md:order-1 gap-8">
             <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-gray-300 dark:border-gray-600">
               <img
-                src="/about/gunajit-sir.png"
+                src="about/gunajit-sir.png"
                 alt="Club In-Charge"
                 width={320}
                 height={320}

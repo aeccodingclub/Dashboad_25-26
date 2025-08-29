@@ -13,7 +13,7 @@ const AboutSection = () => {
       {/* Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
-        style={{ backgroundImage: "url('/bg/pattern-bg-1.jpg')" }}
+        style={{ backgroundImage: "url('bg/pattern-bg-1.jpg')" }}
       />
 
       {/* Content wrapper */}

@@ -54,7 +54,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
         style={{
-          backgroundImage: 'url("/bg/gamer-bg-1.jpeg")',
+          backgroundImage: 'url("bg/gamer-bg-1.jpeg")',
           filter: 'brightness(0.3) contrast(0.8)'
         }}
       />
@@ -104,7 +104,7 @@ const HeroSection = () => {
               }}
             />
             <img
-              src="/logo.svg" 
+              src="logo.svg" 
               alt="AEC Coding Club Logo" 
               className="w-20 h-20 sm:w-28 sm:h-28 md:w-40 md:h-40 mx-auto drop-shadow-2xl relative z-10 transition-transform duration-300 hover:scale-105"
             />
